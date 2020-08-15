@@ -7,4 +7,6 @@ cd ImSpace
 pip install --editable .
 ```
 Usage:
-`imspace --file PATH_TO_FILE`
+```
+imspace --file PATH_TO_FILE
+```
