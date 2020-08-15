@@ -21,7 +21,8 @@ def rgb(file):
     rgb_df = pd.DataFrame(data=colors, columns=['RED', 'GREEN', 'BLUE']).drop_duplicates()
     
     fig = px.scatter_3d(rgb_df, x='RED', y='GREEN', z='BLUE', color='RED', height=1000)
-    fig.update_layout(title_text='IMAGE RGB REPRESENTATION', title_x=0.5)
+    fig.update_layout(title_text='<b>IMAGE RGB REPRESENTATION</b>', title_x=0.5)
+    fig.update_layout(coloraxis_colorbar=dict(title=''))
     fig.write_html(export[0] + '.html')
     
     click.echo('Done.')
